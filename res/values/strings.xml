@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Application Info -->
+	<string name="description">Attempts to send \'knock\' packets to the designated ports and IP addresses. Used for remote administration, not hacking.</string>
+	<string name="author_info">Click host to send knock.  To add hosts, click Menu->Add\n\nCopyright (c) 2009,2010 Stephen Paine\nModified to send knocks faster\nOriginal code by Alexis Robert 2008-2009 Under GPL 3 License</string>
+		
+	<!-- Strings for PortKnocker (main window) -->
+	<string name="app_name">Port Knocker</string>
+	<string name="knock_button_text">Knock</string>
+	<string name="exit_button_text">Exit</string>	
+		
+	<!-- Strings for HostEdit -->
+	<string name="instr_label">Label to display on main screen:</string>
+	<string name="instr_host">Host Name:</string>
+	<string name="instr_timeout">Timeout (in milliseconds):</string>
+	<string name="instr_nickname">The following three fields are optional, and are only required if you want to automatically start ConnectBot after Knocking the host.\n\nType nickname exactly as appears in ConnectBot (to use it\'s settings):
+	</string>
+	<string name="instr_username">Username:</string>
+	<string name="instr_port">Port Number:</string>
+	<string name="instr_packet_type">Packet Type:</string>
+	<string name="label_hints">Host 1</string>
+	<string name="host_hints">www.youraddress.com</string>
+	<string name="timeout_hints">1000</string>
+	<string name="nickname_hints">Host Nickname</string>
+	<string name="username_hints">user</string>
+	<string name="default_port">22</string>
+	<string name="save_button_text">Save</string>
+	<string name="cancel_button_text">Cancel</string>
+	
+	<!-- PortKnocker menu strings -->
+	<string name="add_host">Add Host</string>
+	
+	<!-- PortKnocker context menu strings -->
+	<string name="send_knock">Send Knock</string>
+	<string name="edit_host">Edit Host</string>
+	<string name="edit_ports">Edit Port(s)</string>
+	<string name="delete_host">Delete</string>
+	
+	<!-- PortKnocker Toast message strings -->
+	<string name="start_knocking">Starting Knocking...</string>
+	<string name="knock_success">Knocking Complete!</string>
+	<string name="knock_failure">An error occurred during knocking!</string>
+	<string name="connectbot_not_found">ConnectBot Not Found</string>
+	<string name="empty_hostlist">No Hosts Setup! Use Menu->Add to add some.</string>
+	<string name="no_internet">No Internet Connection Active!</string>
+	
+	<!-- Strings for PortsList -->
+	<string name="add_port">Add Port</string>
+	<string name="edit_port">Edit Port</string>
+	<string name="delete_port">Delete Port</string>
+	
+	<!-- Strings for PortEdit -->
+	<string name="port_edit_header">Add/Edit Port</string>
+	<string name="port_hints">5000</string>
+	<string name="port_packet_type">Packet Type</string>
+	<string name="portlist_header">Port list for host: </string>
+	
+	<!--  Strings for helpWindow -->
+	<string name="hostInstructionsTitle">Empty Host List</string>
+	<string name="hostInstructions">Click host to send knock.\nTo add hosts, click Menu->Add.\n\nAttempts to send \'knock\' packets to the designated ports and IP addresses.\n\nUsed for remote administration, not hacking.\n\nFor detailed instructions, visit http://sites.google.com/site/smpaine/android-applications/portknocker</string>
+	<string name="portsInstructionsTitle">Empty Ports List</string>
+	<string name="portsInstructions">No ports for this host, use Menu->Add to add some.\n\nFor detailed instructions, visit http://sites.google.com/site/smpaine/android-applications/portknocker</string>
+	<string name="ok">Ok</string>
+</resources>

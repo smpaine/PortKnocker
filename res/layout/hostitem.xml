@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/LinearLayout01"
+	android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent">
+	<TextView android:id="@+id/TextView01" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_weight=".5"
+		android:text="test" android:textSize="10pt"></TextView>
+	<TextView android:id="@+id/TextView02" android:layout_height="wrap_content"
+		android:text="test" android:layout_width="wrap_content"
+		android:layout_weight=".3" android:textSize="10pt"></TextView>
+</LinearLayout>

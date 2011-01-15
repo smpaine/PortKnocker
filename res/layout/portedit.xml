@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/ScrollView01"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<RelativeLayout android:id="@+id/RelativeLayout01"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+		<TextView android:id="@+id/TextView01" android:layout_width="wrap_content"
+			android:layout_centerHorizontal="true" android:layout_height="wrap_content"
+			android:text="@string/port_edit_header" android:layout_weight=".7" />
+
+		<LinearLayout android:id="@+id/LinearLayout01"
+			android:layout_below="@id/TextView01" android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<TextView android:id="@+id/TextView02" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/instr_port"
+				android:layout_weight=".5" />
+			<EditText android:id="@+id/EditText01" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_weight=".5"
+				android:inputType="number" android:hint="@string/port_hints" />
+		</LinearLayout>
+
+		<LinearLayout android:id="@+id/LinearLayout02"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_below="@id/LinearLayout01">
+			<TextView android:id="@+id/TextView03" android:layout_width="0dip"
+				android:layout_height="wrap_content" android:text="@string/instr_packet_type"
+				android:layout_weight=".7" />
+			<Spinner android:id="@+id/Spinner01" android:layout_width="wrap_content"
+				android:layout_height="wrap_content"></Spinner>
+		</LinearLayout>
+
+		<LinearLayout android:id="@+id/LinearLayout03"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_below="@id/LinearLayout02">
+			<Button android:id="@+id/Button01" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/save_button_text"
+				android:layout_weight=".5" />
+			<Button android:id="@+id/Button02" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/cancel_button_text"
+				android:layout_weight=".5" />
+		</LinearLayout>
+	</RelativeLayout>
+</ScrollView>

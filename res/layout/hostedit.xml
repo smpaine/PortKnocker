@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@+id/ScrollView01"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<RelativeLayout android:id="@+id/RelativeLayout01"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+		<TextView android:id="@+id/TextView06" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/instr_label" />
+		<EditText android:id="@+id/EditText06" android:layout_below="@id/TextView06"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:inputType="textUri" android:hint="@string/label_hints" />
+
+		<TextView android:id="@+id/TextView01" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/instr_host" android:layout_below="@id/EditText06" />
+		<EditText android:id="@+id/EditText01" android:layout_below="@id/TextView01"
+			android:layout_height="wrap_content" android:layout_width="fill_parent"
+			android:inputType="textUri" android:hint="@string/host_hints" />
+
+		<LinearLayout android:id="@+id/LinearLayout01"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_below="@id/EditText01">
+			<TextView android:id="@+id/TextView02" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/instr_timeout"
+				android:layout_weight=".7" />
+			<EditText android:id="@+id/EditText02" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:inputType="number"
+				android:text="@string/timeout_hints" android:layout_weight=".3" />
+		</LinearLayout>
+
+		<TextView android:id="@+id/TextView03" android:layout_below="@id/LinearLayout01"
+			android:layout_height="wrap_content" android:text="@string/instr_nickname"
+			android:layout_width="fill_parent" />
+		<EditText android:id="@+id/EditText03" android:layout_below="@id/TextView03"
+			android:layout_height="wrap_content" android:inputType="text"
+			android:hint="@string/nickname_hints" android:layout_centerInParent="true"
+			android:layout_width="fill_parent" />
+
+		<LinearLayout android:id="@+id/LinearLayout03"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_below="@id/EditText03">
+			<TextView android:id="@+id/TextView04" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/instr_username"
+				android:layout_weight=".2" />
+			<EditText android:id="@+id/EditText04" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:inputType="text"
+				android:hint="@string/username_hints" android:layout_weight=".8" />
+		</LinearLayout>
+
+		<LinearLayout android:id="@+id/LinearLayout04"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_below="@id/LinearLayout03">
+			<TextView android:id="@+id/TextView05" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:text="@string/instr_port"
+				android:layout_weight=".5" />
+			<EditText android:id="@+id/EditText05" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:inputType="number"
+				android:imeOptions="actionDone" android:text="@string/default_port"
+				android:layout_weight=".5" />
+		</LinearLayout>
+
+		<LinearLayout android:id="@+id/LinearLayout05"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_below="@id/LinearLayout04">
+			<Button android:id="@+id/Button01" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/save_button_text"
+				android:layout_weight=".5" />
+			<Button android:id="@+id/Button02" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/cancel_button_text"
+				android:layout_weight=".5" />
+		</LinearLayout>
+	</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- Application Info -->
+	<string name="description">嘗試發送 \'碰撞\'記憶體到 指定的連接埠和IP位址。 用於遠端管理, 非網路入侵。</string>
+	<string name="author_info">按主機來發送碰撞。 要新增主機, 按功能表->新增\n\n版權 (c) 2009,2010 Stephen Paine\n修改用於更快發送碰撞\nAlexis Robert寫的源程式碼 2008-2009 領有GPL 3執照</string>
+	
+	<!-- Strings for PortKnocker (main window) -->
+	<string name="app_name">連接埠碰撞</string>
+	<string name="knock_button_text">碰撞</string>
+	<string name="exit_button_text">結束</string>
+	
+	<!-- Strings for HostEdit -->
+	<string name="instr_label">标签上显示主屏：</string>
+	<string name="instr_host">主機名字:</string>
+	<string name="instr_timeout">逾時 (以毫秒為單位):</string>
+	<string name="instr_nickname">下列三個區網網網域是可選的, 只有當你想要在碰撞主機後自動開啟ConnectBot時是必須的。\n\n輸入與顯示在ConnectBot中的一樣的暱稱(使用它的設定):
+	</string>
+	<string name="instr_username">標籤上顯示主屏：</string>
+	<string name="instr_port">連接埠號:</string>
+	<string name="instr_packet_type">記憶體類型:</string>
+	<string name="label_hints">主機 1</string>
+	<string name="host_hints">www.youraddress.com</string>
+	<string name="timeout_hints">1000</string>
+	<string name="nickname_hints">主機暱稱</string>
+	<string name="username_hints">使用者</string>
+	<string name="default_port">22</string>
+	<string name="save_button_text">儲存檔案</string>
+	<string name="cancel_button_text">取消</string>
+	
+	<!-- PortKnocker menu strings -->
+	<string name="add_host">新增主機</string>
+	
+	<!-- PortKnocker context menu strings -->
+	<string name="send_knock">發送碰撞</string>
+	<string name="edit_host">編輯主機</string>
+	<string name="edit_ports">編輯連接埠</string>
+	<string name="delete_host">移除</string>
+	
+	<!-- PortKnocker Toast message strings -->
+	<string name="start_knocking">開始碰撞中...</string>
+	<string name="knock_success">完成碰撞!</string>
+	<string name="knock_failure">在碰撞時發生錯誤!</string>
+	<string name="connectbot_not_found">未找到ConnectBot</string>
+	<string name="empty_hostlist">未建立主機! 使用功能表->新增來新增一些。</string>
+	<string name="no_internet">沒有互聯網連接活動!</string>
+	
+	<!-- PortsList Toast message strings -->
+	<string name="empty_portslist">該主機沒有連接埠, 使用功能表->新增來新增一些。</string>
+	
+	<!-- Strings for PortsList -->
+	<string name="add_port">新增連接埠</string>
+	<string name="edit_port">編輯連接埠</string>
+	<string name="delete_port">移除連接埠</string>
+	
+	<!-- Strings for PortEdit -->
+	<string name="port_edit_header">新增/編輯連接埠</string>
+	<string name="port_hints">5000</string>
+	<string name="port_packet_type">記憶體類型</string>
+	<string name="portlist_header">主機的連接埠清單: </string>
+	
+	<!--  Strings for helpWindow -->
+	<string name="hostInstructionsTitle">空主持人名單</string>
+	<string name="hostInstructions">按一下主機發送敲門。\ n要添加主機，單擊菜單的>“添加。\ ñ \ nAttempts發送 \'敲\'包到指定的端口和IP地址。\ ñ \ n已使用的遠程管理，而不是黑客。\ ñ \ n有關詳細說明，請訪問 http://sites.google.com/site/smpaine/android-applications/portknocker</string>
+	<string name="portsInstructionsTitle">空港口名單</string>
+	<string name="portsInstructions">沒有為此主機端口，使用菜單的>“添加補充一些。\ ñ \ n有關詳細說明，請訪問 http://sites.google.com/site/smpaine/android-applications/portknocker</string>
+	<string name="ok">好</string>
+</resources>
