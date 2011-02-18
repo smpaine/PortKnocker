@@ -2,7 +2,7 @@
 <resources>
 	<!-- Application Info -->
 	<string name="description">尝试发送 \'碰撞\'存储器到 指定的端口和IP地址。 用于远程管理, 非网络入侵。</string>
-	<string name="author_info">点击主机来发送碰撞。 要添加主机, 点击菜单->添加\n\n版权 (c) 2009,2010 Stephen Paine\n修改用于更快发送碰撞\nAlexis Robert写的源代码 2008-2009 领有GPL 3执照</string>
+	<string name="author_info">点击主机来发送碰撞。 要添加主机, 点击菜单-&gt;添加\n\n版权 (c) 2009-11 Stephen Paine\n修改用于更快发送碰撞\nAlexis Robert写的源代码 2008-2009 领有GPL 3执照</string>
 	
 	<!-- Strings for PortKnocker (main window) -->
 	<string name="app_name">端口碰撞</string>

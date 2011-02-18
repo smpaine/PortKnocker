@@ -2,7 +2,7 @@
 <resources>
 	<!-- Application Info -->
 	<string name="description">嘗試發送 \'碰撞\'記憶體到 指定的連接埠和IP位址。 用於遠端管理, 非網路入侵。</string>
-	<string name="author_info">按主機來發送碰撞。 要新增主機, 按功能表->新增\n\n版權 (c) 2009,2010 Stephen Paine\n修改用於更快發送碰撞\nAlexis Robert寫的源程式碼 2008-2009 領有GPL 3執照</string>
+	<string name="author_info">按主機來發送碰撞。 要新增主機, 按功能表-&gt;新增\n\n版權 (c) 2009-11 Stephen Paine\n修改用於更快發送碰撞\nAlexis Robert寫的源程式碼 2008-2009 領有GPL 3執照</string>
 	
 	<!-- Strings for PortKnocker (main window) -->
 	<string name="app_name">連接埠碰撞</string>

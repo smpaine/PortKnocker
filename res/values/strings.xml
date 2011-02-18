@@ -2,7 +2,7 @@
 <resources>
 	<!-- Application Info -->
 	<string name="description">Attempts to send \'knock\' packets to the designated ports and IP addresses. Used for remote administration, not hacking.</string>
-	<string name="author_info">Click host to send knock.  To add hosts, click Menu->Add\n\nCopyright (c) 2009,2010 Stephen Paine\nModified to send knocks faster\nOriginal code by Alexis Robert 2008-2009 Under GPL 3 License</string>
+	<string name="author_info">Click host to send knock.  To add hosts, click Menu-&gt;Add\n\nCopyright (c) 2009-11 Stephen Paine\nModified to send knocks faster\nOriginal code by Alexis Robert 2008-2009 Under GPL 3 License</string>
 		
 	<!-- Strings for PortKnocker (main window) -->
 	<string name="app_name">Port Knocker</string>
