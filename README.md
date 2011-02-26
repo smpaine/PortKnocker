@@ -5,7 +5,7 @@ Port Knocker
 -----
 Port Knocker is an Android application that allows people (who are running a port knock daemon) to send TCP or UDP packets to the specified ports. Based off the other app PortKnocking (originally the only one in the Android market), but faster, and semi-more reliable.
 
-Port Knocker Usage Instructions
+Usage Instructions
 -----
 Upon initial installation, the application will have an empty hosts list, and will present a message saying "No Hosts, use Menu->Add to add some."
 
