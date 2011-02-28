@@ -57,8 +57,8 @@
 	
 	<!--  Strings for helpWindow -->
 	<string name="hostInstructionsTitle">Empty Host List</string>
-	<string name="hostInstructions">Click host to send knock.\nTo add hosts, click Menu->Add.\n\nAttempts to send \'knock\' packets to the designated ports and IP addresses.\n\nUsed for remote administration, not hacking.\n\nFor detailed instructions, visit http://sites.google.com/site/smpaine/android-applications/portknocker</string>
+	<string name="hostInstructions">Click host to send knock.\nTo add hosts, click Menu->Add.\n\nAttempts to send \'knock\' packets to the designated ports and IP addresses.\n\nUsed for remote administration, not hacking.\n\nFor detailed instructions, visit https://github.com/smpaine/PortKnocker</string>
 	<string name="portsInstructionsTitle">Empty Ports List</string>
-	<string name="portsInstructions">No ports for this host, use Menu->Add to add some.\n\nFor detailed instructions, visit http://sites.google.com/site/smpaine/android-applications/portknocker</string>
+	<string name="portsInstructions">No ports for this host, use Menu->Add to add some.\n\nFor detailed instructions, visit https://github.com/smpaine/PortKnocker</string>
 	<string name="ok">Ok</string>
 </resources>

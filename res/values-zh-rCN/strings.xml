@@ -60,8 +60,8 @@
 	
 	<!--  Strings for helpWindow -->
 	<string name="hostInstructionsTitle">空主持人名单</string>
-	<string name="hostInstructions">按一下主机发送敲门。\ n要添加主机，单击菜单的>“添加。\ ñ \ nAttempts发送\'敲\'包到指定的端口和IP地址。\ ñ \ n已使用的远程管理，而不是黑客。\ ñ \ n有关详细说明，请访问http://sites.google.com/site/smpaine/android-applications/portknocker</string>
+	<string name="hostInstructions">按一下主机发送敲门。\ n要添加主机，单击菜单的>“添加。\ ñ \ nAttempts发送\'敲\'包到指定的端口和IP地址。\ ñ \ n已使用的远程管理，而不是黑客。\ ñ \ n有关详细说明，请访问https://github.com/smpaine/PortKnocker</string>
 	<string name="portsInstructionsTitle">空港口名单</string>
-	<string name="portsInstructions">此主机没有端口，使用菜单->“添加补充一些。\ ñ \ n有关详细说明，请访问http://sites.google.com/site/smpaine/android-applications/portknocker</string>
+	<string name="portsInstructions">此主机没有端口，使用菜单->“添加补充一些。\ ñ \ n有关详细说明，请访问https://github.com/smpaine/PortKnocker</string>
 	<string name="ok">好</string>
 </resources>
