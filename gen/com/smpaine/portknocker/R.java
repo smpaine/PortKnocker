@@ -48,7 +48,8 @@ public final class R {
         public static final int main=0x7f030003;
         public static final int portedit=0x7f030004;
         public static final int portitem=0x7f030005;
-        public static final int portslist=0x7f030006;
+        public static final int portknockerwidget=0x7f030006;
+        public static final int portslist=0x7f030007;
     }
     public static final class string {
         /**  PortKnocker menu strings 
@@ -84,7 +85,7 @@ public final class R {
         /**  PortsList Toast message strings 
  PortsList Toast message strings 
          */
-        public static final int empty_portslist=0x7f05002b;
+        public static final int empty_portslist=0x7f05002c;
         public static final int exit_button_text=0x7f050004;
         public static final int hostInstructions=0x7f050027;
         /**   Strings for helpWindow 
@@ -134,5 +135,8 @@ public final class R {
         public static final int start_knocking=0x7f050019;
         public static final int timeout_hints=0x7f05000e;
         public static final int username_hints=0x7f050010;
+        /**   Strings for PortKnockerWidget 
+         */
+        public static final int widget_name=0x7f05002b;
     }
 }

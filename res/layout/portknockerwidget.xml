@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/RelativeLayout01" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView android:id="@+id/TextView01" android:layout_height="wrap_content"
+		android:text="@string/widget_name" android:textSize="12pt"
+		android:layout_width="fill_parent" android:gravity="center"
+		android:layout_marginBottom="2pt" />
+	<Button android:id="@+id/Button01" android:layout_below="@id/TextView01"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:text="@string/exit_button_text"
+		android:layout_centerHorizontal="true" android:maxHeight="10px"
+		android:maxWidth="50px" android:minHeight="10px" android:minWidth="50px" />
+</RelativeLayout>

@@ -61,4 +61,7 @@
 	<string name="portsInstructionsTitle">Empty Ports List</string>
 	<string name="portsInstructions">No ports for this host, use Menu->Add to add some.\n\nFor detailed instructions, visit https://github.com/smpaine/PortKnocker</string>
 	<string name="ok">Ok</string>
+	
+	<!--  Strings for PortKnockerWidget -->
+	<string name="widget_name">PortKnocker Widget!</string>
 </resources>
