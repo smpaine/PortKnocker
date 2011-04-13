@@ -15,6 +15,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+//import android.util.Log;
 
 public class DBAdapter {
 	private Context ctx;
@@ -40,7 +41,7 @@ public class DBAdapter {
 
 	private static class DBOpenHelper extends SQLiteOpenHelper {
 		public DBOpenHelper (Context context) {
-			super(context, "hostlist.db", null, 7);
+			super(context, "hostlist.db", null, 8);
 		}
 
 		@Override
@@ -54,15 +55,15 @@ public class DBAdapter {
 					+ KEY_PORT + " STRING NOT NULL DEFAULT \"22\");");
 			db.execSQL("CREATE TABLE " + KEY_DB_PORTS + " (" + KEY_ID
 					+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_HOST_ID
-					+ " STRING, " + KEY_PORT + " STRING, " + KEY_PACKETTYPE
+					+ " STRING, " + KEY_HOST + " STRING, " + KEY_PORT + " STRING, " + KEY_PACKETTYPE
 					+ " STRING NOT NULL DEFAULT \"TCP\");");
 		}
 
 		@Override
 		public void onUpgrade (SQLiteDatabase db, int oldVersion, int newVersion) {
-			Cursor host;
+			Cursor host,port;
 			StringTokenizer stok;
-			String timeout;
+			String timeout, hostIP;
 			long hostID;
 			ContentValues values;
 
@@ -124,8 +125,7 @@ public class DBAdapter {
 							values.put(KEY_PORT, host.getString(host
 									.getColumnIndex(KEY_PORT)));
 							hostID = db.insert(KEY_DB, null, values);
-							// Log.v("dbUpgrade", "Added host: "+
-							// host.getString(host.getColumnIndex(KEY_HOST)));
+							// Log.v("dbUpgrade", "Added host: "+ host.getString(host.getColumnIndex(KEY_HOST)));
 							stok = new StringTokenizer(host.getString(host
 									.getColumnIndex("ports")), ",");
 							// Check ports list for actual port number(s)
@@ -187,8 +187,8 @@ public class DBAdapter {
 							values.put(KEY_LABEL, values
 									.getAsString(KEY_USERNAME)
 									+ "@" + values.getAsString(KEY_HOST));
-							hostID = db.insert(KEY_DB, null, values);
-							// Log.v("dbUpgrade", "Added host: "+
+							db.insert(KEY_DB, null, values);
+							// Log.v("dbUpgrade", "Added host: "+ host.getString(host.getColumnIndex(KEY_HOST)));
 						} while (host.moveToNext());
 					}
 					// Log.v("dbUpgrade", "Done upgrading to version 6");
@@ -196,11 +196,55 @@ public class DBAdapter {
 				host.close();
 				// Log.v("dbUpgrade", "Finished adding host(s)");
 				db.execSQL("DROP TABLE old");
-				// Log.v("dbUpgrade", "Upgrade to version 5 done.");
+				// Log.v("dbUpgrade", "Upgrade to version 6 done.");
 			}
-			// The easy way out...not my way
-			// db.execSQL("DROP TABLE IF EXISTS "+KEY_DB);
-			// onCreate(db);
+			
+			if (oldVersion <= 8) {
+				// Log.v("dbUpgrade", "Upgrading to version 8");
+
+				db.execSQL("ALTER TABLE " + KEY_DB_PORTS + " RENAME TO oldPorts");
+				// Log.v("dbUpgrade", "Altered ports table to oldPorts");
+				db.execSQL("CREATE TABLE " + KEY_DB_PORTS + " (" + KEY_ID
+						+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_HOST_ID
+						+ " STRING, " + KEY_HOST + " STRING, " + KEY_PORT + " STRING, " + KEY_PACKETTYPE
+						+ " STRING NOT NULL DEFAULT \"TCP\");");
+				// Log.v("dbUpgrade", "Created new ports table");;
+				port = db.query("oldPorts", null, null, null, null, null, null);
+				if (port != null) {
+					// Log.v("dbUpgrade", "port not null!");
+					port.moveToFirst();
+					if (port.isFirst()) {
+						// Log.v("dbUpgrade", "at first port");
+						do {
+							// Log.v("dbUpgrade", "cycling through...");
+							// This part retrieves the current KEY_HOST (host name/IP) from the hosts table,
+							// and puts it in the associated port's row in the port table
+							// Log.v("dbUpgrade", "fetching KEY_HOST for KEY_HOST_ID="+port.getString(port.getColumnIndex(KEY_HOST_ID)));
+							host = db.query(KEY_DB, new String[]{KEY_ID, KEY_HOST}, KEY_ID+" = "+port.getString(port.getColumnIndex(KEY_HOST_ID)), null, null, null, null);
+							if (host==null) {
+								hostIP="";
+							} else {
+								host.moveToFirst();
+								hostIP=host.getString(host.getColumnIndex(KEY_HOST));
+							}
+							host.close();
+							values = new ContentValues();
+							values.put(KEY_HOST_ID, port.getString(port.getColumnIndex(KEY_HOST_ID)));
+							values.put(KEY_HOST, hostIP);
+							values.put(KEY_PORT, port.getString(port.getColumnIndex(KEY_PORT)));
+							values.put(KEY_PACKETTYPE, port.getString(port.getColumnIndex(KEY_PACKETTYPE)));
+							db.insert(KEY_DB_PORTS, null, values);
+							// Log.v("dbUpgrade", "Added port: "+ port.getString(port.getColumnIndex(KEY_PORT)));
+						} while (port.moveToNext());
+					}
+					// Log.v("dbUpgrade", "Done upgrading to version 8");
+				}
+				port.close();
+				// Log.v("dbUpgrade", "Finished adding port(s)");
+				db.execSQL("DROP TABLE oldPorts");
+				// Log.v("dbUpgrade", "Upgrade to version 8 done.");
+			}
+			db.setVersion(newVersion);
 		}
 	}
 
@@ -358,17 +402,19 @@ public class DBAdapter {
 		db.update(KEY_DB, values, KEY_ID + "=" + id, null);
 	}
 
-	public void addPort (long hostID, String port, String packetType) {
+	public void addPort (long hostID, String hostIP, String port, String packetType) {
 		ContentValues values = new ContentValues();
 		values.put(KEY_HOST_ID, hostID);
+		values.put(KEY_HOST, hostIP);
 		values.put(KEY_PORT, port);
 		values.put(KEY_PACKETTYPE, packetType);
 		db.insert(KEY_DB_PORTS, null, values);
 	}
 
-	public void updatePort (long id, long hostID, String port, String packetType) {
+	public void updatePort (long id, long hostID, String hostIP, String port, String packetType) {
 		ContentValues values = new ContentValues();
 		values.put(KEY_HOST_ID, hostID);
+		values.put(KEY_HOST, hostIP);
 		values.put(KEY_PORT, port);
 		values.put(KEY_PACKETTYPE, packetType);
 		db.update(KEY_DB_PORTS, values, KEY_ID + "=" + id, null);

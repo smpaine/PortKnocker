@@ -11,6 +11,7 @@ package com.smpaine.portknocker;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import android.database.Cursor;
+import android.util.Log;
 
 public class CheckHost {
 	String hostname, nickname, username, port;
@@ -47,6 +48,8 @@ public class CheckHost {
 	public int CheckAndKnock () {
 		int port, success = 0;
 		final String host = hostname;
+		String newHost;
+		boolean hostChanged=false;
 		InetAddress address;
 		DBAdapter dbadapter;
 		Cursor ports;
@@ -65,6 +68,8 @@ public class CheckHost {
 
 		// Resolve the host string before doing knocking, could cause
 		// a speed increase by not having to lookup the hostname
+		// Now we allow people to have a different hostname for each port,
+		// so this only helps when all ports have the same hostname
 		try {
 			address = new InetSocketAddress(host, 0).getAddress();
 		} catch (SecurityException ex) {
@@ -79,6 +84,22 @@ public class CheckHost {
 					do {
 						port = Integer.parseInt(ports.getString(ports
 								.getColumnIndex(DBAdapter.KEY_PORT)));
+						
+						// Check if this port has a different address/IP
+						newHost=ports.getString(ports.getColumnIndex(DBAdapter.KEY_HOST));
+						if (!newHost.equals(host) || hostChanged) {
+							hostChanged=true;
+							Log.v("CheckHost","Different hostname for this ("+port+") port...");
+							try {
+								address = new InetSocketAddress(newHost, 0).getAddress();
+							} catch (SecurityException ex) {
+								// catch the only error attempting to resolve a hostname can cause
+								return -1;
+							}
+						} else {
+							Log.v("CheckHost","Same hostname for this ("+port+") port.");
+						}
+						
 
 						// Log.v("CheckHost","Knocking "+ports.getString(ports.getColumnIndex(DBAdapter.KEY_PACKETTYPE))+" port "+port);
 						if (ports.getString(

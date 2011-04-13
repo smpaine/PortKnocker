@@ -18,7 +18,7 @@
 				android:layout_weight=".5" />
 			<EditText android:id="@+id/EditText01" android:layout_width="wrap_content"
 				android:layout_height="wrap_content" android:layout_weight=".5"
-				android:inputType="number" android:hint="0.0.0.0" />
+				android:inputType="textUri" android:hint="@string/host_hints" />
 		</LinearLayout>
 
 		<LinearLayout android:id="@+id/LinearLayout02"

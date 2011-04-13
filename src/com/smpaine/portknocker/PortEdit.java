@@ -19,7 +19,9 @@ import android.widget.Spinner;
 
 public class PortEdit extends Activity {
 	private Long rowid, hostID;
+	private String host;
 	private DBAdapter dbadapter;
+	private EditText hostIP;
 	private EditText port;
 	private Spinner packetType;
 	private Button savebutton;
@@ -34,7 +36,8 @@ public class PortEdit extends Activity {
 		dbadapter = new DBAdapter(this);
 		dbadapter.open();
 
-		port = (EditText) findViewById(R.id.EditText01);
+		hostIP = (EditText) findViewById(R.id.EditText01);
+		port = (EditText) findViewById(R.id.EditText02);
 		packetType = (Spinner) findViewById(R.id.Spinner01);
 		savebutton = (Button) findViewById(R.id.Button01);
 		CancelButton = (Button) findViewById(R.id.Button02);
@@ -66,6 +69,7 @@ public class PortEdit extends Activity {
 		Bundle extras = getIntent().getExtras();
 		// extras should ALWAYS contain hostID
 		hostID = extras.getLong(DBAdapter.KEY_HOST_ID);
+		host = extras.getString(DBAdapter.KEY_HOST);
 		if (extras.containsKey(DBAdapter.KEY_ID)) {
 			rowid = extras.getLong(DBAdapter.KEY_ID);
 			populateFields();
@@ -78,7 +82,9 @@ public class PortEdit extends Activity {
 			int ptype = 0;
 			Cursor portInfo = dbadapter.getRawPort(rowid);
 			startManagingCursor(portInfo);
-
+			
+			hostIP.setText(portInfo.getString(portInfo.getColumnIndexOrThrow(DBAdapter.KEY_HOST)));
+			
 			port.setText(portInfo.getString(portInfo
 					.getColumnIndexOrThrow(DBAdapter.KEY_PORT)));
 
@@ -88,10 +94,13 @@ public class PortEdit extends Activity {
 				ptype = 1;
 			}
 			packetType.setSelection(ptype);
+		} else {
+			hostIP.setText(host);
 		}
 	}
 
 	private void commit () {
+		String hostName = hostIP.getText().toString();
 		String portNum = port.getText().toString();
 		String packet_type = (String) packetType.getSelectedItem();
 
@@ -99,9 +108,9 @@ public class PortEdit extends Activity {
 		portNum = portNum.replaceAll("[^0-9]", "");
 
 		if (rowid == null) {
-			dbadapter.addPort(hostID, portNum, packet_type);
+			dbadapter.addPort(hostID, hostName, portNum, packet_type);
 		} else {
-			dbadapter.updatePort(rowid, hostID, portNum, packet_type);
+			dbadapter.updatePort(rowid, hostID, hostName, portNum, packet_type);
 		}
 	}
 }
