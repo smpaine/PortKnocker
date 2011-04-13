@@ -11,6 +11,7 @@ package com.smpaine.portknocker;
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -70,6 +71,8 @@ public class PortEdit extends Activity {
 		// extras should ALWAYS contain hostID
 		hostID = extras.getLong(DBAdapter.KEY_HOST_ID);
 		host = extras.getString(DBAdapter.KEY_HOST);
+		Log.v("PortEdit","host="+host);
+		hostIP.setText(host);
 		if (extras.containsKey(DBAdapter.KEY_ID)) {
 			rowid = extras.getLong(DBAdapter.KEY_ID);
 			populateFields();
@@ -94,8 +97,6 @@ public class PortEdit extends Activity {
 				ptype = 1;
 			}
 			packetType.setSelection(ptype);
-		} else {
-			hostIP.setText(host);
 		}
 	}
 
@@ -104,6 +105,10 @@ public class PortEdit extends Activity {
 		String portNum = port.getText().toString();
 		String packet_type = (String) packetType.getSelectedItem();
 
+		if (hostName.length()<1) {
+			hostName=host;
+		}
+		
 		// Cleanup ports list and timeout (remove incorrect characters);
 		portNum = portNum.replaceAll("[^0-9]", "");
 
