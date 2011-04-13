@@ -1,5 +1,13 @@
 package com.smpaine.portknocker;
 
+/**
+ * Port Knocker A port knocking application for android Based off of the
+ * original PortKnocking application by Alexis Robert Under GPL 3 License
+ * http://www.gnu.org/licenses/gpl.txt
+ * 
+ * Copyright Stephen Paine 2009-11
+ */
+
 import com.smpaine.portknocker.R;
 import android.app.PendingIntent;
 import android.appwidget.*;

@@ -5,7 +5,7 @@ package com.smpaine.portknocker;
  * original PortKnocking application by Alexis Robert Under GPL 3 License
  * http://www.gnu.org/licenses/gpl.txt
  * 
- * Copyright Stephen Paine 2009,2010
+ * Copyright Stephen Paine 2009-11
  */
 
 import java.net.InetAddress;
