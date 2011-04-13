@@ -18,10 +18,11 @@ Adding a Host
 5. Click "Save", after which you will be taken to another screen that is labeled "Port list for host: ..."
 6. Since this is a new host, the Port list is empty, and will display a message saying "No ports for this host, use Menu->Add to add some."
 7. To add ports, click the Menu button, then choose "Add Port"
-8. Fill out the "Port Number" field, and select the "Packet Type" to send (either TCP or UDP)
-9. Click "Save"
-10. Repeat steps 7-9 for each additional port (Ports will be knocked in the order they are listed)
-11. Use the back button (arrow pointing backwards) to exit the "Ports List" screen.
+8. If you want the knock for this port to be directed to a different host (other than the one that is automatically placed in the "Host Name" field), enter the desired host/IP address in the "Host Name" field.
+9. Fill out the "Port Number" field, and select the "Packet Type" to send (either TCP or UDP)
+10. Click "Save"
+11. Repeat steps 7-9 for each additional port (Ports will be knocked in the order they are listed)
+12. Use the back button (arrow pointing backwards) to exit the "Ports List" screen.
 
 Editing a Host
 -----
@@ -34,7 +35,7 @@ Editing Ports
 -----
 1. To edit a hosts ports directly, click and hold the name of the host to be edited
 2. Select "Edit Port(s)" from the contextual menu
-3. To add ports, click "Menu", then choose "Add Port" (look at steps 7-10 of "Adding a Host" for more information)
+3. To add ports, click the "Menu" button on your device, then choose "Add Port" (look at steps 7-10 of "Adding a Host" for more information)
 4. To edit a port, click and hold the port to be changed.  Choose "Edit Port" to change the port's settings, or choose "Delete Port" to remove the selected port from the list.
 
 Sending Knocks to a Host
