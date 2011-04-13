@@ -29,6 +29,9 @@ Editing a Host
 1. To edit a host, click and hold the name of the host to be edited
 2. Select "Edit Host" from the contextual menu
 3. Make changes
+
+*NOTE If you change the IP address here, it will only change the IP address that is used for connect bot; it will NOT change the IP address for each port, that must be done for each port individually via editing of the ports. This will most likely be fixed in a future version.
+
 4. Click "Save" to save changes, or "Cancel" to cancel changes (using the back button will also cancel changes)
 
 Editing Ports
