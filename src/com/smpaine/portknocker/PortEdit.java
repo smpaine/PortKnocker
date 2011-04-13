@@ -11,7 +11,6 @@ package com.smpaine.portknocker;
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -71,7 +70,6 @@ public class PortEdit extends Activity {
 		// extras should ALWAYS contain hostID
 		hostID = extras.getLong(DBAdapter.KEY_HOST_ID);
 		host = extras.getString(DBAdapter.KEY_HOST);
-		Log.v("PortEdit","host="+host);
 		hostIP.setText(host);
 		if (extras.containsKey(DBAdapter.KEY_ID)) {
 			rowid = extras.getLong(DBAdapter.KEY_ID);
