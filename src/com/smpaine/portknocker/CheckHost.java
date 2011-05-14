@@ -11,7 +11,7 @@ package com.smpaine.portknocker;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import android.database.Cursor;
-import android.util.Log;
+//import android.util.Log;
 
 public class CheckHost {
 	String hostname, nickname, username, port;
@@ -89,7 +89,7 @@ public class CheckHost {
 						newHost=ports.getString(ports.getColumnIndex(DBAdapter.KEY_HOST));
 						if (!newHost.equals(host) || hostChanged) {
 							hostChanged=true;
-							Log.v("CheckHost","Different hostname for this ("+port+") port...");
+							//Log.v("CheckHost","Different hostname for this ("+port+") port...");
 							try {
 								address = new InetSocketAddress(newHost, 0).getAddress();
 							} catch (SecurityException ex) {
@@ -97,7 +97,7 @@ public class CheckHost {
 								return -1;
 							}
 						} else {
-							Log.v("CheckHost","Same hostname for this ("+port+") port.");
+							//Log.v("CheckHost","Same hostname for this ("+port+") port.");
 						}
 						
 

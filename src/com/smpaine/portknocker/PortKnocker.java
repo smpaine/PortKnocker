@@ -93,21 +93,10 @@ public class PortKnocker extends Activity {
 	private boolean checkInternet () {
 		try {
 			connectionInfo = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-			wifiInfo = connectionInfo
-					.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-			mobileInfo = connectionInfo
-					.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
-
-			netState = wifiInfo.getState();
-			if (netState.equals(State.CONNECTED)
-					|| netState.equals(State.CONNECTING)) {
-				return true;
-			}
-			netState = mobileInfo.getState();
-			if (netState.equals(State.CONNECTED)
-					|| netState.equals(State.CONNECTING)) {
-				return true;
-			}
+			// test for connection
+		    if (connectionInfo.getActiveNetworkInfo() != null && connectionInfo.getActiveNetworkInfo().isAvailable() && connectionInfo.getActiveNetworkInfo().isConnected()) {
+		        return true;
+		    }
 		} catch (SecurityException ex) {
 			// Can't notify from here
 		}
