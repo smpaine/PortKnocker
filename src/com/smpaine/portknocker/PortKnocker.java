@@ -15,9 +15,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
-import android.net.NetworkInfo.State;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.ContextMenu;
@@ -42,8 +40,6 @@ public class PortKnocker extends Activity {
 	private boolean hintShown = false;
 	private PortKnocker me;
 	private ConnectivityManager connectionInfo;
-	private NetworkInfo wifiInfo, mobileInfo;
-	private State netState;
 
 	private void launchKnocking () {
 		new Thread(new Runnable() {
