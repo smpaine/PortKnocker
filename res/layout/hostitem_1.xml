@@ -4,5 +4,5 @@
 	android:layout_width="fill_parent">
 	<TextView android:id="@+id/TextView01" android:layout_width="wrap_content"
 		android:layout_height="wrap_content" android:layout_weight="1"
-		android:text="test" android:textSize="10pt"></TextView>
+		android:text="test" android:textSize="30sp"></TextView>
 </LinearLayout>
