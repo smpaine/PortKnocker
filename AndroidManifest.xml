@@ -20,15 +20,15 @@
 		<activity android:name=".PortEdit"
 			android:windowSoftInputMode="stateVisible|adjustResize">
 		</activity>
+		<receiver android:name="PortKnockerWidgetProvider" >
+	    <intent-filter>
+	        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+	    </intent-filter>
+	    <meta-data android:name="android.appwidget.provider"
+	    			android:resource="@xml/widget_info" />
+		</receiver>
 	</application>
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" />
-	<receiver android:name="PortKnockerWidget" >
-	    <intent-filter>
-	        <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-	    </intent-filter>
-	    <meta-data android:name="com.smpaine.portknocker.PortKnockerWidget"
-	               android:resource="@layout/portknockerwidget" />
-	</receiver>
 </manifest> 
