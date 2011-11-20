@@ -52,92 +52,93 @@ public final class R {
         public static final int widget_layout=0x7f030007;
     }
     public static final class string {
+        /**  Strings for HostEdit 
+ Strings for HostEdit 
+ Strings for HostEdit 
+         */
+        public static final int add_edit_host=0x7f060005;
         /**  PortKnocker menu strings 
  PortKnocker menu strings 
  PortKnocker menu strings 
          */
-        public static final int add_host=0x7f060014;
+        public static final int add_host=0x7f060015;
         /**  Strings for PortsList 
  Strings for PortsList 
  Strings for PortsList 
          */
-        public static final int add_port=0x7f06001f;
+        public static final int add_port=0x7f060020;
         /**  Strings for PortKnocker (main window) 
  Strings for PortKnocker (main window) 
  Strings for PortKnocker (main window) 
          */
         public static final int app_name=0x7f060002;
         public static final int author_info=0x7f060001;
-        public static final int cancel_button_text=0x7f060013;
-        public static final int connectbot_not_found=0x7f06001c;
-        public static final int default_port=0x7f060011;
-        public static final int delete_host=0x7f060018;
-        public static final int delete_port=0x7f060021;
+        public static final int cancel_button_text=0x7f060014;
+        public static final int connectbot_not_found=0x7f06001d;
+        public static final int default_port=0x7f060012;
+        public static final int delete_host=0x7f060019;
+        public static final int delete_port=0x7f060022;
         /**  Application Info 
  Application Info 
  Application Info 
          */
         public static final int description=0x7f060000;
-        public static final int edit_host=0x7f060016;
-        public static final int edit_port=0x7f060020;
-        public static final int edit_ports=0x7f060017;
-        public static final int empty_hostlist=0x7f06001d;
+        public static final int edit_host=0x7f060017;
+        public static final int edit_port=0x7f060021;
+        public static final int edit_ports=0x7f060018;
+        public static final int empty_hostlist=0x7f06001e;
         /**  PortsList Toast message strings 
  PortsList Toast message strings 
          */
-        public static final int empty_portslist=0x7f06002c;
+        public static final int empty_portslist=0x7f06002d;
         public static final int exit_button_text=0x7f060004;
-        public static final int hostInstructions=0x7f060027;
+        public static final int hostInstructions=0x7f060028;
         /**   Strings for helpWindow 
   Strings for helpWindow 
   Strings for helpWindow 
          */
-        public static final int hostInstructionsTitle=0x7f060026;
-        public static final int host_hints=0x7f06000d;
-        public static final int instr_host=0x7f060006;
-        /**  Strings for HostEdit 
- Strings for HostEdit 
- Strings for HostEdit 
-         */
-        public static final int instr_label=0x7f060005;
-        public static final int instr_nickname=0x7f060008;
-        public static final int instr_packet_type=0x7f06000b;
-        public static final int instr_port=0x7f06000a;
-        public static final int instr_timeout=0x7f060007;
-        public static final int instr_username=0x7f060009;
+        public static final int hostInstructionsTitle=0x7f060027;
+        public static final int host_hints=0x7f06000e;
+        public static final int instr_host=0x7f060007;
+        public static final int instr_label=0x7f060006;
+        public static final int instr_nickname=0x7f060009;
+        public static final int instr_packet_type=0x7f06000c;
+        public static final int instr_port=0x7f06000b;
+        public static final int instr_timeout=0x7f060008;
+        public static final int instr_username=0x7f06000a;
         public static final int knock_button_text=0x7f060003;
-        public static final int knock_failure=0x7f06001b;
-        public static final int knock_success=0x7f06001a;
-        public static final int label_hints=0x7f06000c;
-        public static final int nickname_hints=0x7f06000f;
-        public static final int no_internet=0x7f06001e;
-        public static final int ok=0x7f06002a;
+        public static final int knock_failure=0x7f06001c;
+        public static final int knock_success=0x7f06001b;
+        public static final int label_hints=0x7f06000d;
+        public static final int nickname_hints=0x7f060010;
+        public static final int no_internet=0x7f06001f;
+        public static final int ok=0x7f06002b;
         /**  Strings for PortEdit 
  Strings for PortEdit 
  Strings for PortEdit 
          */
-        public static final int port_edit_header=0x7f060022;
-        public static final int port_hints=0x7f060023;
-        public static final int port_packet_type=0x7f060024;
-        public static final int portlist_header=0x7f060025;
-        public static final int portsInstructions=0x7f060029;
-        public static final int portsInstructionsTitle=0x7f060028;
-        public static final int save_button_text=0x7f060012;
+        public static final int port_edit_header=0x7f060023;
+        public static final int port_hints=0x7f060024;
+        public static final int port_packet_type=0x7f060025;
+        public static final int portlist_header=0x7f060026;
+        public static final int portsInstructions=0x7f06002a;
+        public static final int portsInstructionsTitle=0x7f060029;
+        public static final int save_button_text=0x7f060013;
         /**  PortKnocker context menu strings 
  PortKnocker context menu strings 
  PortKnocker context menu strings 
          */
-        public static final int send_knock=0x7f060015;
+        public static final int send_knock=0x7f060016;
         /**  PortKnocker Toast message strings 
  PortKnocker Toast message strings 
  PortKnocker Toast message strings 
          */
-        public static final int start_knocking=0x7f060019;
-        public static final int timeout_hints=0x7f06000e;
-        public static final int username_hints=0x7f060010;
+        public static final int start_knocking=0x7f06001a;
+        public static final int timeout_hints=0x7f06000f;
+        public static final int username_hints=0x7f060011;
         /**   Strings for PortKnockerWidget 
          */
-        public static final int widget_name=0x7f06002b;
+        public static final int widget_name=0x7f06002c;
     }
     public static final class xml {
         public static final int widget_info=0x7f040000;

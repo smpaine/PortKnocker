@@ -27,7 +27,7 @@ public class HostEdit extends Activity {
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.hostedit);
-		this.setTitle("Add/Edit a host");
+		this.setTitle(R.string.add_edit_host);
 
 		dbadapter = new DBAdapter(this);
 		dbadapter.open();

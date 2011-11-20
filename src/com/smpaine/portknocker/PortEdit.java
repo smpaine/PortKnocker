@@ -31,7 +31,7 @@ public class PortEdit extends Activity {
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.portedit);
-		this.setTitle("Add/Edit Port");
+		this.setTitle(R.string.port_edit_header);
 
 		dbadapter = new DBAdapter(this);
 		dbadapter.open();

@@ -10,6 +10,7 @@
 	<string name="exit_button_text">Exit</string>	
 		
 	<!-- Strings for HostEdit -->
+	<string name="add_edit_host">Add/Edit a host</string>
 	<string name="instr_label">Label to display on main screen:</string>
 	<string name="instr_host">Host Name:</string>
 	<string name="instr_timeout">Timeout (in milliseconds):</string>

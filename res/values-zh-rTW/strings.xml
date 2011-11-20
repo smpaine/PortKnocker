@@ -10,6 +10,7 @@
 	<string name="exit_button_text">結束</string>
 	
 	<!-- Strings for HostEdit -->
+	<string name="add_edit_host">添加/編輯主機</string>
 	<string name="instr_label">标签上显示主屏：</string>
 	<string name="instr_host">主機名字:</string>
 	<string name="instr_timeout">逾時 (以毫秒為單位):</string>

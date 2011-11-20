@@ -10,6 +10,7 @@
 	<string name="exit_button_text">退出</string>
 	
 	<!-- Strings for HostEdit -->
+	<string name="add_edit_host">添加/编辑主机</string>
 	<string name="instr_label">使用者名稱:</string>
 	<string name="instr_host">主机名字:</string>
 	<string name="instr_timeout">超时 (以毫秒为单位):</string>
