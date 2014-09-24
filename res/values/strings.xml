@@ -65,4 +65,5 @@
 	
 	<!--  Strings for PortKnockerWidget -->
 	<string name="widget_name">PortKnocker Widget!</string>
+	<string name="appwidget_configure_instructions">Widget Configuration Instructions</string>
 </resources>

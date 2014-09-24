@@ -69,6 +69,7 @@ public class HostEdit extends Activity {
 		dbadapter.close();
 	}
 
+	@SuppressWarnings("deprecation")
 	private void populateFields () {
 		if (rowid != null) {
 			Cursor host = dbadapter.getRawHost(rowid);

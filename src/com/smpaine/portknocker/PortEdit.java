@@ -78,6 +78,7 @@ public class PortEdit extends Activity {
 		dbadapter.close();
 	}
 
+	@SuppressWarnings("deprecation")
 	private void populateFields () {
 		if (rowid != null) {
 			int ptype = 0;

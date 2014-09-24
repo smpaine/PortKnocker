@@ -30,6 +30,7 @@ public class PortsList extends Activity {
 	private long hostID;
 	private String hostName;
 
+	@SuppressWarnings("deprecation")
 	private ListAdapter updateList () {
 		Cursor portsCursor = dbadapter.getRawPorts(hostID);
 		startManagingCursor(portsCursor);

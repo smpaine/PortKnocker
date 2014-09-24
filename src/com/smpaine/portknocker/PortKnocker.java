@@ -9,6 +9,7 @@ package com.smpaine.portknocker;
  */
 
 import com.smpaine.portknocker.R;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -16,6 +17,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.ContextMenu;
@@ -30,6 +32,7 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 
+@TargetApi(Build.VERSION_CODES.DONUT)
 public class PortKnocker extends Activity {
 	private int success;
 	private DBAdapter dbadapter;
@@ -99,6 +102,7 @@ public class PortKnocker extends Activity {
 		return false;
 	}
 
+	@SuppressWarnings("deprecation")
 	private ListAdapter updateList () {
 
 		Cursor hostsCursor = dbadapter.getRawHosts();
@@ -107,8 +111,9 @@ public class PortKnocker extends Activity {
 		String[] from = new String[] { DBAdapter.KEY_LABEL };
 		int[] to = new int[] { R.id.TextView01 };
 
-		SimpleCursorAdapter hosts = new SimpleCursorAdapter(this,
-				R.layout.hostitem_1, hostsCursor, from, to);
+		SimpleCursorAdapter hosts = null;
+		
+		hosts = new SimpleCursorAdapter(this, R.layout.hostitem_1, hostsCursor, from, to);
 
 		if (hosts.getCount() == 0 && !hintShown) {
 			hintShown = true;
