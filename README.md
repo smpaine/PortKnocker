@@ -47,3 +47,6 @@ To send the port knocks to the host, either click the hostname to start knocking
   -- or --
 Click and hold the host's name to bring up a contextual menu, then choose "Send Knock"
 
+Privacy Policy
+-----
+This application does not access, store, nor transmit user data. Only data entered into the application is stored within the application on this device, and is not stored outside of this device.
